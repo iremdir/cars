@@ -1,10 +1,10 @@
 import 'dart:math';
 
 void main() {
-  car carA = car('a', 'b', 1990, 200000);
-  car carB = car('c', 'd', 2004, 30000);
-  car carC = car('e', 'f', 2023, 155000);
-  car carD = car('g', 'h', 1960, 990000);
+  car carA = car('Bugatti', 'Veyron', 2005, 4000000);
+  car carB = car('Lamborghini', 'Veneno', 2013, 4300000);
+  car carC = car('Audi', 'R8', 2006, 378900);
+  car carD = car('Ferrari', 'F50', 1995, 500000);
 
   final cars = [carA, carB, carC, carD];
 
@@ -23,9 +23,9 @@ void main() {
       }
     }
     print(
-        'The most expensive car is ${mostExpensive.model} and its price is ${mostExpensive.fiyat}');
+        'The most expensive car is ${mostExpensive.marka} ${mostExpensive.model} and its price is ${mostExpensive.fiyat}€');
     print(
-        'The cheapest car is ${cheapest.model} and its price is ${cheapest.fiyat}');
+        'The cheapest car is ${cheapest.marka} ${cheapest.model} and its price is ${cheapest.fiyat}€');
   }
 
   ageController() {
@@ -38,13 +38,14 @@ void main() {
       }
     }
     print(
-        'The youngest car is ${youngest.model} and its ${2023 - youngest.yil} years old.');
+        'The youngest car is ${youngest.marka} ${youngest.model} and its ${2023 - youngest.yil} years old.');
     print(
-        'The oldest car is ${oldest.model} and its ${2023 - oldest.yil} years old.');
+        'The oldest car is ${oldest.marka} ${oldest.model} and its ${2023 - oldest.yil} years old.');
   }
 
   priceController();
   ageController();
+  print(cars);
 }
 
 class car {
