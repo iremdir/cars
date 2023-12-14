@@ -45,7 +45,10 @@ void main() {
 
   priceController();
   ageController();
-  print(cars);
+
+  for (int i = 0; i <= 3; i++) {
+    cars[i].fiyat -= cars[i].yil;
+  }
 }
 
 class car {
