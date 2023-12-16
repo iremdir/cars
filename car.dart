@@ -44,12 +44,7 @@ void main() {
   priceController();
   ageController();
 
-  for (int i = 0; i <= 3; i++) {
-    cars[i].fiyat -= cars[i].yil;
-  }
-  for (int i = 0; i < cars.length; i++) {
-    print(cars[i]);
-  }
+  print(cars);
 }
 
 class car {
@@ -61,7 +56,7 @@ class car {
 
   @override
   String toString() {
-    return 'markası: $marka , modeli: $model , üretim yılı : $yil , fiyatı : $fiyat';
+    return '\nmarkası: $marka , modeli: $model , üretim yılı : $yil , fiyatı : $fiyat';
   }
 
   int indirim(int tutar) {
